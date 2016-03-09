@@ -3,14 +3,15 @@
 class Owner
 
   def name
-    name = 'Foobar Kadigan'
+    name = 'Tish Scolnik'
   end
 
   def birthdate
-    birthdate = Date.new(1987, 8, 29)
+    birthdate = Date.new(1988, 4, 3)
   end
 
   def countdown
+    Rails.logger.debug 'DEBUG: entering Owner countdown method'
     today = Date.today
     birthday = Date.new(today.year, birthdate.month, birthdate.day)
     if birthday > today
